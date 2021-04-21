@@ -1,6 +1,8 @@
 .ToDo {
     min-height: 100vh;
     width: 100%;
+    max-width: 375px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -10,6 +12,7 @@
     background-position: center;
     /* background: #242424; */
     background: #303841;
+    position: relative;
 }
 .ToDo h2 {
     margin: 20px 0;
@@ -23,7 +26,7 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 80%;
+    width: 100%;
     height: 80%;
     -webkit-clip-path: circle(50% at 24% 93%);
     clip-path: circle(50% at 24% 93%);
