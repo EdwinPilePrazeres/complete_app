@@ -1,0 +1,92 @@
+.form {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    /* background: #303841; */
+    transition: width 0.5s, height 0.5s;
+    transition-delay: 0.75s, 0s;
+    z-index: 100;
+    border-radius: 4px;
+    overflow: hidden;
+    
+}
+.form.active {
+    width: 85%;
+    /* height: 350px; */
+    height: 130px;
+    transition: width 0.5s, height 0.5s;
+    transition-delay: 0s, 0.75s;
+}
+.form .toggle {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* background: #303841; */
+    background: #fff;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.form .toggle.active {
+    background: #3a4750;
+}
+.form .toggle::before {
+    content: '+';
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    /* color: #fff; */
+    color: #303841;
+    font-weight: 400;
+    transition: 0.5s;
+}
+.form .toggle.active::before {
+    transform: rotate(315deg);
+    color: #fff;
+}
+.form .input {
+    position:absolute;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 19px;
+    
+}
+
+.input input, .input button {
+    padding: 0.5rem;
+    font-size: 12pt;
+    background: #fff;
+    outline: none;
+    border: none;
+}
+.input input {
+    width: 85%;
+    border: 1px solid #6699CC;
+}
+.input button {
+    color: #f6c90e;
+    background: #eee;
+    cursor: pointer;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.input button:hover {
+    background: #f6c90e;
+    color: #eee;
+}

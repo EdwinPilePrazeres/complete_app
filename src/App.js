@@ -1,24 +1,23 @@
-import logo from './logo.svg';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 import './App.css';
+import Calendar from './components/Calendar/Calendar_Page';
+import Home from './components/Home/Home';
+import ToDo from './components/ToDo'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router className="App">
+      <Switch>
+        <Route path='/complete_app' component={Home} exact/>
+        <Route path='/complete_app/Tasks' component={ToDo} />
+        {/* <Route path='/complete_app/Tasks' component={Tasks} /> */}
+        <Route path='/complete_app/calendar' component={Calendar} />
+      </Switch>
+    </Router>
   );
 }
 
