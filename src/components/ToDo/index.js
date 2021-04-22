@@ -5,7 +5,6 @@ import Navbar from '../Navbar'
 import "./index.css";
 import './Todo.css'
 import './Form.css'
-import './ToDoList.css'
 
 const ToDo = () => {
   // state stuff

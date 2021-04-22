@@ -11,14 +11,14 @@ const CardsContainer = () => {
   return (
     <section className="content">
       <div className="cards_container">
-        <div className="cards">
+        <div className="cards disable">
           <FcAlarmClock className='icons'/>
           <h2>Alarm</h2>
         </div>
-        <div className="cards">
+        <Link to='/complete_app/notes' className="cards">
           <MdSpeakerNotes className='icons' />
           <h2>Notes</h2>
-        </div>
+        </Link>
         <Link to='/complete_app/tasks' className="cards">
           <FcParallelTasks className='icons' />
           <h2>Tasks</h2>

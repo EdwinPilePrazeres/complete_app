@@ -10,8 +10,8 @@
     /* background: url('../images/black_white.jpg') no-repeat; */
     background-size: cover;
     background-position: center;
-    /* background: #242424; */
-    background: #303841;
+    background: #242424;
+    /* background: #303841; */
     position: relative;
 }
 .ToDo h2 {
