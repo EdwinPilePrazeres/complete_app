@@ -12,20 +12,20 @@ const CardsContainer = () => {
     <section className="content">
       <div className="cards_container">
         <div className="cards disable">
-          <FcAlarmClock className='icons'/>
           <h2>Alarm</h2>
+          <FcAlarmClock className='icons'/>
         </div>
         <Link to='/complete_app/notes' className="cards">
-          <MdSpeakerNotes className='icons' />
           <h2>Notes</h2>
+          <MdSpeakerNotes className='icons' />
         </Link>
         <Link to='/complete_app/tasks' className="cards">
-          <FcParallelTasks className='icons' />
           <h2>Tasks</h2>
+          <FcParallelTasks className='icons' />
         </Link>
         <Link to='/complete_app/calendar' className="cards">
-          <FcCalendar className='icons' />
           <h2>Calendar</h2>
+          <FcCalendar className='icons' />
         </Link>
       </div>
     </section>

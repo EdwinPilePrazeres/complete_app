@@ -66,18 +66,18 @@
     
 }
 
-.input input, .input button {
+.form .input input, .input button {
     padding: 0.5rem;
     font-size: 12pt;
     background: #fff;
     outline: none;
     border: none;
 }
-.input input {
+.form .input input {
     width: 85%;
     border: 1px solid #6699CC;
 }
-.input button {
+.form .input button {
     color: #f6c90e;
     background: #eee;
     cursor: pointer;
@@ -86,7 +86,7 @@
     align-items: center;
     justify-content: center;
 }
-.input button:hover {
+.form .input button:hover {
     background: #f6c90e;
     color: #eee;
 }

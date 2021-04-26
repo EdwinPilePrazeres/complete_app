@@ -7,7 +7,7 @@ import Menu from './Menu';
 const Home = () => {
     return (
         <div className='big_container'>
-            <div className='circle'></div>
+            {/* <div className='circle'></div> */}
             <Header />
             <CardsContainer />
             <Menu />

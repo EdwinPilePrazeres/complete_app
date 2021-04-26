@@ -1,51 +1,61 @@
 
-.big_container .content {
+.Home_container .content {
     /* height: 55%; */
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 10;
+    width: calc(100%-300px);
+    position: relative;
+    
 }
-.big_container .content .cards_container {
-    width: 75%;
+.Home_container .content .cards_container {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    /* width: 75%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(8em, 1fr));
     grid-template-rows: auto 1fr auto;
     grid-gap: 10px;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
 }
-.big_container .content .cards_container .cards {
-    /* height: 120px; */
-    /* width: 120px; */
-    width: 8em;
-    height: 8em;
-    margin: 3px auto;
-    border-radius: 20px;
-    background: #383838;
+.Home_container .content .cards_container .cards {
+    position: relative;
+    background: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
     -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    text-decoration: none; 
     align-items: center;
-    color: #fff;
-    text-decoration: none;
 }
-.big_container .content .cards_container .cards h2{
-    font-size: 14px;
+.Home_container .content .cards_container .cards h2{
+    /* font-size: 14px; */
+    /* color: #999; */
     font-weight: 400;
-    text-shadow: 2px 2px 2px #000000;
-    color: #eee;
+    text-shadow: 2px 2px 2px #fff;
+    /* color: #eee; */
+    color: #383838;
 }
-.icons {
-    height: 25px;
-    width: 25px;
+.Home_container .icons {
+    /* height: 25px; */
+    /* width: 25px; */
+    font-size: 2.5em;
 }
-.big_container .content .cards_container .cards.disable {
+.Home_container .content .cards_container .cards.disable {
     /* background: rgba(56,56,56,.2); */
     background: rgba(86, 26, 26, 0.2);
     cursor: not-allowed;
+}
+@media (max-width: 992px) {
+    .Home_container .content .cards_container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 480px) {
+    .Home_container .content .cards_container {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }

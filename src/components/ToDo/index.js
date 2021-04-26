@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Form from "./Form";
 import ToDoList from "./ToDoList";
-import Navbar from '../Navbar'
+// import Navbar from '../Navbar'
 import "./index.css";
 import './Todo.css'
 import './Form.css'

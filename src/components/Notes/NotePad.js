@@ -10,15 +10,15 @@ export default function NotePad() {
   const notesData = [
     {
       id: 1,
-      title: "Are IPA's smashed pine needles?",
+      title: "Want to save something?",
       body:
-        "Lorem ipsum dolor amet squid wolf chambray, kinfolk palo santo fixie yuccie austin leggings activated charcoal succulents narwhal post-ironic literally scenester. Fashion axe butcher tilde cliche aesthetic succulents VHS pickled typewriter post-ironic godard copper mug asymmetrical etsy. Butcher VHS cliche synth cold-pressed."
+        "Try it out and then reload the page"
     },
     {
       id: 2,
-      title: "Petchouli should smell different.",
+      title: "The save is Local, ... ",
       body:
-        "Lorem ipsum dolar intelligentsia taxidermy retro waistcoat jianbing. Cornhole banh mi, sriracha 8-bit truffaut quinoa. Seitan pitchfork venmo, trust fund cold-pressed normcore gochujang portland pabst yuccie glossier authentic meggings disrupt. Fam hammock post-ironic polaroid vaporware, heirloom glossier blog echo park."
+        "so when you reupload the page it will appear, but if you clear cache you will lose it"
     }
   ];
 
@@ -49,7 +49,7 @@ export default function NotePad() {
   };
 
   return (
-    <div>
+    <div className='section_notepad'>
       <Header />
       <div className="section">
         <div className="container">
