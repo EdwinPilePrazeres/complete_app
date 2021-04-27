@@ -18,3 +18,10 @@
     z-index: 10;
     width: auto;
 }
+/* Responsive */
+@media (max-width: 992px) {
+    .Calendar_container {
+        width: 100%;
+        left: 0;
+    }
+}
