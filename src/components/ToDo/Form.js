@@ -18,9 +18,9 @@ const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
     ]);
   };
 
-  const statusHandler = (e) => {
-    setStatus(e.target.value);
-  };
+  // const statusHandler = (e) => {
+  //   setStatus(e.target.value);
+  // };
 
   const [clicked, setClicked] = useState(false);
 

@@ -5,11 +5,52 @@ import ToDoList from "./ToDoList";
 import "./index.css";
 import './Todo.css'
 import './Form.css'
+import Navigation from "../Navigation/Navigation";
+
+export const tasksData = [
+  {
+    id: 1,
+    text: "Take the garbage out",
+    completed: true
+  },
+  {
+    id: 2,
+    text: "Defrost the chicken",
+    completed: false
+  },
+  {
+    id: 3,
+    text: 'Finish "Complete_app"',
+    completed: false
+  },
+  {
+    id: 4,
+    text: "Watch Dr.Stone",
+    completed: false
+  },
+  {
+    id: 5,
+    text: "Read Dragon Ball Manga",
+    completed: true
+  },
+  {
+    id: 6,
+    text: "Finish market task",
+    completed: false
+  },
+  {
+    id: 7,
+    text: "Watch Marvel Series",
+    completed: false
+  }
+];
 
 const ToDo = () => {
+  
+  
   // state stuff
   const [inputText, setInputText] = useState("");
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState(tasksData);
   const [status, setStatus] = useState("all");
   const [filteredTodos, setFilteredTodos] = useState([]);
 
@@ -53,9 +94,11 @@ const ToDo = () => {
   };
 
   return (
+    <>
+    <Navigation />
     <div className="ToDo">
         {/* <Navbar /> */}
-        <div className='circle'></div>
+        {/* <div className='circle'></div> */}
         <h2>Tasks</h2>
       <Form
         inputText={inputText}
@@ -71,6 +114,7 @@ const ToDo = () => {
         filteredTodos={filteredTodos}
       />
     </div>
+    </>
   );
 };
 

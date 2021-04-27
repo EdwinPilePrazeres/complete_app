@@ -1,0 +1,68 @@
+/*  */
+ .navigation {
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background: #242424;
+    /* background: #003147; */
+    transition: 0.5s;
+    overflow: hidden;
+}
+ .navigation.active {
+    width: 60px;
+}
+ .navigation ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+ .navigation ul li {
+    position: relative;
+    width: 100%;
+    list-style: none;
+}
+ .navigation ul li:hover {
+    background: #eee;
+    /* background: #03a9f4; */
+}
+ .navigation ul li:nth-child(1) {
+    margin-bottom: 20px;
+}
+ .navigation ul li:nth-child(1):hover {
+    background: transparent;
+    color: #eee;
+}
+ .navigation ul li:nth-child(1) a:hover {
+    background: transparent;
+    color: #eee;
+}
+ .navigation ul li a {
+    position: relative;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #eee;
+    align-items: center;
+}
+ .navigation ul li a:hover {
+    color: #242424;
+}
+ .navigation ul li a .icon {
+    position: relative;
+    display: flex;
+    min-width: 60px;
+    height: 60px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    /* color: #fff; */
+}
+ .navigation ul li a .title {
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+}

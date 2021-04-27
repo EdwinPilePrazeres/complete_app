@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "./Header";
 import NoteTable from "./NoteTable";
 import AddNoteForm from "./AddNoteForm";
 import EditNoteForm from "./EditNoteForm";
 import './Notes.min.css'
+import Navigation from "../Navigation/Navigation";
 
-export default function NotePad() {
   // Creating initial notes and setting intial state.
-  const notesData = [
+  export const notesData = [
     {
       id: 1,
       title: "Want to save something?",
@@ -22,7 +22,36 @@ export default function NotePad() {
     }
   ];
 
+export default function NotePad() {
+
+
   const [notes, setNotes] = useState(notesData);
+
+   // run once
+  useEffect(() => {
+    getLocalNotes();
+  }, []);
+
+  // useEffect
+  useEffect(() => {
+    saveLocalNotes();
+  }, [notes]);
+
+  // functions
+  
+
+  // saving it locally
+  const saveLocalNotes = () => {
+    localStorage.setItem("notes", JSON.stringify(notes));
+  };
+  const getLocalNotes = () => {
+    if (localStorage.getItem("notes") === null) {
+      localStorage.setItem("notes", JSON.stringify([]));
+    } else {
+      const notesLocal = JSON.parse(localStorage.getItem("notes"));
+      setNotes(notesLocal);
+    }
+  };
 
   const addNote = note => {
     // A work-around for generating unique IDs
@@ -49,6 +78,7 @@ export default function NotePad() {
   };
 
   return (
+    
     <div className='section_notepad'>
       <Header />
       <div className="section">
@@ -68,6 +98,7 @@ export default function NotePad() {
               notes={notes}
               editRow={editRow}
               deleteNote={deleteNote}
+              key={notes.id}
             />
           </div>
         </div>

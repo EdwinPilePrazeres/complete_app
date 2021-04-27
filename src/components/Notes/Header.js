@@ -7,12 +7,9 @@ export default function Header() {
         <div className="container">
           <h1 className="title">Notes</h1>
           <h2 className="subtitle">
-            {/* A simple CRUD application built with React hooks. */}
           </h2>
         </div>
       </div>
     </section>
   );
 }
-
-// For styling references, please refer to bulma.io + bulma.min.css.

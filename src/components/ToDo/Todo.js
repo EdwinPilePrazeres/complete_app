@@ -2,7 +2,9 @@ import React from "react";
 import { BiCheckboxChecked, BiCheckbox } from "react-icons/bi";
 import { BsTrash2Fill } from "react-icons/bs";
 
+
 const Todo = ({ text, todo, todos, setTodos }) => {
+
   const deleteHandler = () => {
     setTodos(todos.filter((el) => el.id !== todo.id));
   };
